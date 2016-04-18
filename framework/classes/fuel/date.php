@@ -19,8 +19,8 @@ class Date extends \Fuel\Core\Date
      */
     public static function compare($date1, $date2)
     {
-        $date1 = ( ! $date1 instanceof Date) ? static::forge($date1) : $date1;
-        $date2 = ( ! $date2 instanceof Date) ? static::forge($date2) : $date2;
+        $date1 = (! $date1 instanceof Date) ? static::forge($date1) : $date1;
+        $date2 = (! $date2 instanceof Date) ? static::forge($date2) : $date2;
 
         $date1 = $date1->format('%Y-%m-%d');
         $date2 = $date2->format('%Y-%m-%d');

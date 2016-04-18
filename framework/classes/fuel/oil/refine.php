@@ -37,7 +37,7 @@ class Refine extends Oil\Refine
         if ($module) {
             if ($module == 'local') {
                 $namespace = 'Local';
-            } else if ($module == 'nos') {
+            } elseif ($module == 'nos') {
                 $namespace = 'Nos';
             } else {
                 $namespaces = \Nos\Config_Data::load('app_namespaces', true);
@@ -116,7 +116,7 @@ class Refine extends Oil\Refine
         } else {
             if ($module == 'local') {
                 $task = \Autoloader::generateSuffixedNamespace('default', 'app', 'Tasks').ucfirst($originalTask);
-            } else if ($module == 'nos') {
+            } elseif ($module == 'nos') {
                 $task = \Autoloader::generateSuffixedNamespace('nos', 'package', 'Tasks').ucfirst($originalTask);
             } else {
                 $task = \Autoloader::generateSuffixedNamespace($module, 'module', 'Tasks').ucfirst($task);
